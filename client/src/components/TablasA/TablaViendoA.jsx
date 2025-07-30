@@ -1,16 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import ModalForm from '../ModalForm';
 import axios from 'axios';
 
-const TablaViendoA = ({  onEdit, onDelete }) => {
+const TablaViendoA = () => {
     const [animes, setAnimes] = useState([]);
     const [modalOpen, setModalOpen] = useState(false);
     const [editingIndex, setEditingIndex] = useState(null);
-    const [form, setForm] = useState({
-        nombre: '',
-        temporada: '',
-        episodio: ''
-    });
+    const [form, setForm] = useState({ nombre: '', temporada: '', episodio: '' });
 
     // Función para obtener los animes desde la API
     const fetchAnimes = async () => {
