@@ -41,7 +41,6 @@ const ModalForm = ({ isOpen, onClose, onSubmit, form, onChange, isEditing }) => 
                             autocomplete="off"
                             value={form.episodio}
                             onChange={onChange}
-                            required
                             className="w-full border px-3 py-2 rounded"
                         />
                     </div>
